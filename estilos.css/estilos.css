@@ -52,7 +52,7 @@ input {
   display: none;
 }
 
-input:checked + label {
+input:checked+label {
   background-color: #E7F6F2;
   color: black;
 }
@@ -72,13 +72,14 @@ input:checked + label {
   flex-direction: column;
   align-items: center;
 }
+
 .btn-de-ataque {
   background-color: #395b64;
   padding: 10px;
   box-sizing: border-box;
   border-radius: 10px;
   border-color: transparent;
-  width: 100px;
+  width: 80px;
   color: white;
   font-family: "Poppins", sans-serif;
 }
@@ -117,6 +118,7 @@ input:checked + label {
 }
 
 @media (max-width: 361px) {
+
   .tarjetas,
   .tarjetas-ataques {
     flex-direction: column;

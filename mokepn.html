@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>MOKEPON!</title>
     <link rel="stylesheet" href="./estilos.css/estilos.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <section id="seleccionar-mascota">
-        <h1 class="titulo">Mokepon</h1>
+      <h1 class="titulo">Mokepon</h1>
 
-        <h2 class="subtitulo">Elige tu mascota:</h2>
+      <h2 class="subtitulo">Elige tu mascota:</h2>
 
-        <div id="contenedor-tarjetas" class="tarjetas">
-            <!-- <input type="radio" name="mascota" id="hipodoge" />
+      <div id="contenedor-tarjetas" class="tarjetas">
+        <!-- <input type="radio" name="mascota" id="hipodoge" />
             <label class="tarjeta-mokepon" for="hipodoge">
                 <p>Hipodoge</p>
                 <img src="images/img1.png" alt="" />
@@ -31,49 +30,53 @@
                 <p>Ratigueya</p>
                 <img src="images/img3.png" alt="ratigueya" />
             </label> -->
-        </div>
+      </div>
 
-        <button id="btn-mascota">Seleccionar</button>
+      <button id="btn-mascota">Seleccionar</button>
+    </section>
+
+    <section id="ver-mapa">
+      <h2 class="titulo">Recorre el mapa con tu mokepon</h2>
+      <canvas id="mapa"></canvas>
+      <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba</button onmouseup="deternerMovimineto()">
+      <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">Izquierda</button onmouseup="deternerMovimineto()">
+      <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">Abajo</button onmouseup="deternerMovimineto()">
+      <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">Derecha</button>
     </section>
 
     <section id="seleccionar-ataque">
+      <h2 class="subtitulo">Elige tu ataque:</h2>
 
-        <h2 class="subtitulo">Elige tu ataque:</h2>
-
-        <div id="contenedor-de-ataques" class="tarjetas-ataques">
-            <!-- <button class="btn-de-ataque" id="btn-fuego">Fuego 🔥</button>
+      <div id="contenedor-de-ataques" class="tarjetas-ataques">
+        <!-- <button class="btn-de-ataque" id="btn-fuego">Fuego 🔥</button>
             <button class="btn-de-ataque" id="btn-agua">Agua 💧</button>
             <button class="btn-de-ataque" id="btn-tierra">Tierra 🌱</button> -->
+      </div>
+
+      <div id="mensajes">
+        <p id="result">- - - -</p>
+      </div>
+
+      <section id="reiniciar">
+        <button id="btn-reiniciar">Reiniciar</button>
+      </section>
+
+      <div class="ataques">
+        <!--caja para jugador "hijo"-->
+        <div class="ataques-jugador">
+          <p id="vida-jugador">0</p>
+          <p id="nMascota-jugador"></p>
+          <div id="ataque-del-jugador"></div>
         </div>
 
-        <div id="mensajes">
-            <p id="result"> - - - -</p>
-
+        <!--caja para el enemigo "hijo"-->
+        <div class="ataques-enemigo">
+          <p id="vida-enemigo">0</p>
+          <p id="nMascota-enemigo"></p>
+          <div id="ataque-del-enemigo"></div>
         </div>
-
-        <section id="reiniciar">
-            <button id="btn-reiniciar">Reiniciar</button>
-        </section>
-
-        <div class="ataques">
-            <!--caja para jugador "hijo"-->
-            <div class="ataques-jugador">
-                <p id="vida-jugador">0</p>
-                <p id="nMascota-jugador"></p>
-                <div id="ataque-del-jugador"></div>
-            </div>
-
-            <!--caja para el enemigo "hijo"-->
-            <div class="ataques-enemigo">
-                <p id="vida-enemigo">0</p>
-                <p id="nMascota-enemigo"></p>
-                <div id="ataque-del-enemigo"></div>
-
-            </div>
-        </div>
-
+      </div>
     </section>
     <script src="./scripts/mokepon.js"></script>
-</body>
-
+  </body>
 </html>
